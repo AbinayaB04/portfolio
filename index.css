@@ -9,7 +9,7 @@ a {
   text-decoration: none;
 }
 body {
-  background: #03002e;
+  background: #fff;
   font-family: "Poppins", sans-serif;
 }
 html{
@@ -23,8 +23,8 @@ nav{
   position: fixed;
   top: 0;
   left: 0;
-  background: #03002e;
-  color: #fff;
+  background: #fff;
+  color: #0b0000;
   z-index: 99;
 }
 .nav_content{
@@ -38,7 +38,7 @@ nav{
 nav .logo a{
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: #060000;
 }
 nav .checkbox{
   display: none;
@@ -48,7 +48,7 @@ nav input{
 }
 nav.checkbox i{
   font-size: 2rem;
-  color: #fff;
+  color: #060000;
   cursor: pointer;
 }
 ul{
@@ -63,16 +63,16 @@ ul li a{
   border: 2px solid transparent;
   text-decoration: none;
   font-weight: 600;
-  color: #fff;
+  color: #060000;
   transition: 0.3s;
 }
 ul li a:hover{
   border-top-color: #fff;
   border-bottom-color: #fff;
-  color: #fff;
+  color: #060000;
 }
 .hero{
-  background: #03002e;
+  background: #fff;
 }
 .hero_container{
   min-height: 100vh;
@@ -91,7 +91,7 @@ ul li a:hover{
 }
 .subtitle{
   letter-spacing: 2px;
-  color: #fff;
+  color: #060000;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -99,45 +99,86 @@ ul li a:hover{
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 3rem;
-  color: #fff;
+  color: #060000;
   margin-bottom: 1rem;
 }
 .title span{
-  color: #0ef;
+  color: #060000;
   font-weight: 600;
 }
 .description{
   font-size: 1.2rem;
   line-height: 1.5rem;
-  color: #fff;
+  color: #060000;
   margin-bottom: 2rem;
 }
-.action__btns{
+.action__btns {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  animation: fadeIn 1s ease-out ; 
+
 }
-.btn{
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background: #0ef;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.6rem;
+  background: #fff;
   border-radius: 4rem;
-  box-shadow: 0 0 2rem #76a4c6;
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: 600;
+  box-shadow: 0 0 2rem #fff;
+  font-size: 1.1rem;
+  color: #060000;
+  font-weight: 400;
   outline: 0;
-  border: 0;
+  border: 2px solid #060000;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  animation: fadeIn 1s ease-out 0.5s forwards; /* Delayed start */
+
 }
-.btn:hover{
-  box-shadow: none;
-  transition: 0.5s;
+
+.btn:hover {
+  background: #060000;
+  color: #fff;
 }
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  animation: fadeIn 1s ease-out 1s forwards; /* Delayed start */
+
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #060000;
+  transition: color 0.3s;
+  animation: fadeIn 1s ease-out 1s forwards; /* Delayed start */
+
+}
+
+.social-icon:hover {
+  color: #4a2c8c; /* Change color on hover */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .image{
   display: grid;
   place-items: center;
 }
 .image img{
-  width: min(25rem, 90%);
+  width: 80%;
+  border-radius: 50%;
 }
 .image img{
   animation: animate 5s ease-in-out infinite;
@@ -162,94 +203,212 @@ ul li a:hover{
 .heading{
   text-align: center;
   font-size: 3.5rem;
-  color: #fff;
+  color: #060000;
   margin-top: 10rem;
 }
 .heading span{
-  color: #76a4c6;
+  color: #060000;
 }
-.card{
-  width: 300px;
-  height: 400px;
-  cursor: pointer;
-  background: #76a4c6;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin: 20px;
-  padding: 20px;
+/* About Section */
+.about {
+  padding: 5rem 0;
+  background: #fff;
 }
-.card:hover{
-  transform: scale(1.1,1.1);
-  transition: .5s linear;
+.about_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 1rem;
 }
-.pera{
+.about_image img {
   width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  animation: animate 5s ease-in-out infinite;
+
 }
-.card p{
-  margin-top: 20px;
-  color: #fff;
+.about_content {
+  flex: 1;
+  padding-left: 2rem;
 }
-.card a{
-  margin-top: 40px;
-  padding: 10px;
-  width: 100%;
-  display: block;
+.about_content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about_content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+/* Portfolio Section */
+.portfolio {
   text-align: center;
-  background: #03002e;
-  border-radius: 4px;
-  color: #76a4c6;
-  font-size: 15px;
+  padding: 50px 0;
+  background-color: #fff; /* Light background color to match the image */
 }
-.card a:hover{
-  box-shadow: 0 4px 10px rgba(51, 62, 255, 0.3);
+
+.portfolio .heading {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #000;
 }
-.portfolio-projects p{
-  font-size: 1.3rem;
-  margin-right: 40px;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  color: #fff;
+
+.portfolio .subheading {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
 }
-.contact h2{
-  margin-bottom: 3rem;
+
+.portfolio .subheading a {
+  color: #4a2c8c;
+  text-decoration: none;
+  font-weight: bold;
 }
-.contact form{
-  max-width: 70rem;
-  margin: 1rem auto;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.contact form .input-box{
+
+.portfolio .portfolio-projects {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
 }
-.contact form .input-box input,
-.contact form textarea{
+
+.portfolio .portfolio-item {
+  position: relative;
+  max-width: 30%;
+  flex: 1 1 30%;
+  text-align: left;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .portfolio-item .image-container {
+  position: relative;
+  
+}
+
+.portfolio .portfolio-item img {
   width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
+  height: auto;
+  filter: blur(0.5px); /* Apply blur effect to the image */
+  transition: filter 0.3s ease;
+}
+
+.portfolio .portfolio-item .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the description */
+  opacity: 0;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio .portfolio-item:hover img {
+  filter: blur(0); /* Remove blur effect on hover */
+}
+
+.portfolio .portfolio-item:hover .description {
+  opacity: 1; /* Show description on hover */
+}
+
+.portfolio .description h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+}
+
+.portfolio .description p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.portfolio .view-project-btn {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Keyframes for the view-project-btn span animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+    margin-left: 5px;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    margin-left: 10px;
+  }
+}
+
+.portfolio .view-project-btn span {
+  opacity: 0;
+  transform: translateX(-5px);
+  margin-left: 5px;
+  transition: margin-left 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio .view-project-btn:hover span {
+  animation: slideIn 0.3s ease forwards;
+}
+
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #fff;
+}
+
+.contact .heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.contact-details a {
+  color: #060000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.contact-links .btn {
+  padding: 1rem 2rem;
+  background: #060000;
   color: #fff;
-  background: #42405f;
-  border-radius: .8rem;
-  margin: .7rem 0;
-}
-.contact form .input-box input{
-  border: 0;
-  outline: 0;
-  width: 49%;
-}
-.contact form textarea{
-  border: 0;
-  outline: 0;
-  resize: none;
-}
-.contact form .btn{
-  border: 0;
-  outline: 0;
-  margin-top: 2rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
+
+.contact-links .btn:hover {
+  background: #333;
+}
+
+
 .footer{
   display: flex;
   justify-content: center;
@@ -259,7 +418,7 @@ ul li a:hover{
 }
 .footer-text{
   font-size: 1rem;
-  color: #fff;
+  color: #060000;
 }
 @media (width < 752px){
   nav .checkbox{
@@ -306,9 +465,7 @@ ul li a:hover{
   .heading{
     font-size: 2rem;
   }
-  .contact form .input-box input,
-  .contact{
-    font-size: 15px;
+  .contact form .input-box input {
     width: 100%;
   }
   form .textarea{
