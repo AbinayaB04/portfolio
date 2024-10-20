@@ -24,7 +24,8 @@
         <input type="checkbox" name="check" id="check">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#About">About</a></li>     
+          <li><a href="#About">About</a></li>
+          <li><a href="#Skills">Skills</a></li>    
           <li><a href="#Portfolio">Projects</a></li>
           <li><a href="#Contact">Contact</a></li>
         </ul>
@@ -43,7 +44,7 @@
            Resume
         </a>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
+          <a href="https://www.linkedin.com/in/abinaya-b-542575288/" target="_blank" class="social-icon">
             <i class="fa-brands fa-linkedin"></i>
           </a>
           <a href="https://github.com/AbinayaB04" target="_blank" class="social-icon">
@@ -56,7 +57,7 @@
       </div>
     </div>
     <div class="image">
-      <img src="images/first.png" alt="Abinaya B">
+      <img src="images/ab.png" alt="Abinaya B">
     </div>
   </div>
 </section>
@@ -65,7 +66,7 @@
 <section id="About" class="about">
   <div class="about_container">
     <div class="about_image">
-      <img src="images/first.png" alt="Abinaya B">
+      <img src="images/abi1.png" alt="Abinaya B">
     </div>
     <div class="about_content">
       <h2>Abinaya B</h2>
@@ -77,7 +78,22 @@
     </div>
   </div>
 </section>
+<section id="Skills" class="skills-section">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <p class="subheading">Technologies I work with:</p>
+    <div class="skills-container">
+      <div class="skill-item"><i class="fa-brands fa-html5" style="color: #e34c26;"></i></div>
+      <div class="skill-item"><i class="fa-brands fa-css3-alt" style="color: #2965f1;"></i></div>
+      <div class="skill-item"><i class="fa-brands fa-js" style="color: #f0db4f;"></i></div>
+      <div class="skill-item"><i class="fa-brands fa-react" style="color: #61dafb;"></i></div>
+      <div class="skill-item"><img src="images/py.png" alt="C Logo" width="30"><p style="color: #A8B9CC;"></p></div>
+      <div class="skill-item"><img src="images/C.png" alt="C Logo" width="30"><p style="color: #A8B9CC;"></p></div>
+      <div class="skill-item"><img src="images/C++.png" alt="C++ Logo" width="30"><p style="color: #00599C;"></p></div>
+      <div class="skill-item"><img src="images/MYSQL.png" alt="MYSQL Logo" width="30"><p style="color: #00599C;"></p></div>
 
+
+    </div>
+  </section>
 
 <!-- Portfolio Section -->
 <section class="portfolio" id="Portfolio">
@@ -89,8 +105,10 @@
       <div class="image-container">
         <img src="images/project1.jpg" alt="Hostel Database">
         <div class="description">
-          <h3>Hostel Database</h3>
-          <p>This Python project uses Tkinter and MySQL for hostel management, featuring tables for admin, students, staff, rooms, and visitors. It supports record updates, deletions, insertions, and includes user authentication with ID and password.
+          <h3>HostelSphere</h3>
+          <p>The Python project uses Tkinter and MySQL for hostel management,
+            featuring tables for admin, students, staff, rooms, and visitors. It supports record updates,
+            deletions, and insertions, and includes user authentication with ID and password.
           </p>
           <!-- <a href="#" class="view-project-btn">View project <span>&rarr;</span></a> -->
         </div>
@@ -100,8 +118,11 @@
       <div class="image-container">
         <img src="images/project2.jpg" alt="Notepad++">
         <div class="description">
-          <h3>Notepad++</h3>
-          <p>Developed in C++, this Notepad++ simulation includes user authentication and provides each user with a dedicated directory for managing notes, including viewing, modifying, deleting, and replacing.</p>
+          <h3>SafePass Monitor</h3>
+          <p>Built a web app using HTML, CSS, and JavaScript that shows password
+            strength with a visual meter, offers helpful tips, and generates strong passwords.
+            Designed it to be user-friendly and accessible, with smooth animations and interactive
+            features.</p>
           <!-- <a href="#" class="view-project-btn">View project <span>&rarr;</span></a> -->
         </div>
       </div>
@@ -110,9 +131,13 @@
       <div class="image-container">
         <img src="images/project3.png" alt="calculator">
         <div class="description">
-          <h3>calculator</h3>
-          <p>This calculator project is developed in HTML, CSS, JavaScript which has all the features of the calculator.</p>
-          <!-- <a href="#" class="view-project-btn">View project <span>&rarr;</span></a> -->
+          <h3>UniQR</h3>
+          <p>Developed a QR Attendance System using Python, Flask, and PostgreSQL for
+            automated attendance. Integrated QR code generation, face recognition, and geolocation
+            tracking. Ensured secure admin dashboard for efficient course and class management,
+            enhancing system reliability and usability.</p>    
+        <!-- <a href="#" class="view-project-btn">View project <span>&rarr;</span></a> -->
+        
         </div>
       </div>
     </div>
@@ -124,25 +149,18 @@
 
     <!--Contact Section-->
 
-    <section class="contact" id="Contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
-      <div class="contact-details">
-        <p>Email: <a href="mailto:babinayakk@gmail.com">babinayakk@gmail.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">9842781083</a></p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:babinayakk@gmail.com" class="btn">Send Email</a>
-      </div>
+
+    <section id="Contact" class="contact">
+      <h2 class="heading">Get in <span>Touch</span></h2>
+      <p>If you’d like to chat about a project or just say hello, feel free to reach out.</p>
+      <form action="https://formsubmit.co/babinayakk@gmail.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </section>
-  
-
-
-    <!--Footer Section-->
-
-    <footer class="footer">
-      <div class="footer-text">
-        <p>Copyright &copy; 2024 by @Abinaya B | All Rights Reserved.</p>
-      </div>
+    
 
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
